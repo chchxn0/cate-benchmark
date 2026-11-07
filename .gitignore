@@ -1,0 +1,34 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Generated data (keep folder via .gitkeep)
+data/synthetic/*
+!data/synthetic/.gitkeep
+data/criteo/*
+!data/criteo/.gitkeep
+
+# Generated results
+# Share final experiment results and figures
+results/tables/*
+!results/tables/.gitkeep
+!results/tables/formal_*.csv
+!results/tables/formal_*.json
+
+results/figures/*
+!results/figures/.gitkeep
+!results/figures/final_step4/
+!results/figures/final_step4/**
+
+# OS / editor
+.DS_Store
+.vscode/
+
+results/tables/formal_c02_memory_*.csv

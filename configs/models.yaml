@@ -1,0 +1,27 @@
+# Pre-registered model hyperparameters (fixed before running any experiment).
+# The same random seed (experiment seed) is passed to every model.
+
+# Shared base learner for T-Learner and X-Learner (all stages),
+# and for the outcome nuisance model E[Y|X] of CausalForestDML.
+base_learner:
+  n_estimators: 200
+  min_samples_leaf: 5
+  max_features: 1.0
+  n_jobs: 1             # single thread for every model -> comparable train times
+
+x_learner:
+  # null -> use the experiment's design treatment probability (randomised assignment)
+  propensity: null
+
+causal_forest:
+  n_estimators: 1000    # must be divisible by subforest_size (4)
+  min_samples_leaf: 5
+  max_features: 1.0
+  honest: true
+  cv: 5                 # cross-fitting folds for the nuisance models
+  propensity_model: constant   # constant | random_forest
+  n_jobs: 1
+
+split:
+  test_size: 0.2
+  stratify: T

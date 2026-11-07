@@ -1,0 +1,337 @@
+{
+  "created_at_utc": "2026-11-07T03:47:47+00:00",
+  "updated_at_utc": "2026-11-07T12:44:17+00:00",
+  "invocations": [
+    {
+      "finished_at_utc": "2026-11-07T03:47:47+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--n",
+        "1000"
+      ],
+      "conditions": [
+        "c00"
+      ],
+      "replications_run": 30,
+      "replications_skipped_resume": 0,
+      "wall_time_sec": 86.96748866599955
+    },
+    {
+      "finished_at_utc": "2026-11-07T04:15:14+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--condition-id",
+        "c01",
+        "--resume"
+      ],
+      "conditions": [
+        "c01"
+      ],
+      "replications_run": 30,
+      "replications_skipped_resume": 0,
+      "wall_time_sec": 1331.1758504179998
+    },
+    {
+      "finished_at_utc": "2026-11-07T04:42:15+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--condition-id",
+        "c03",
+        "--resume"
+      ],
+      "conditions": [
+        "c03"
+      ],
+      "replications_run": 30,
+      "replications_skipped_resume": 0,
+      "wall_time_sec": 1358.4171104150046
+    },
+    {
+      "finished_at_utc": "2026-11-07T05:22:27+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--condition-id",
+        "c04",
+        "--resume"
+      ],
+      "conditions": [
+        "c04"
+      ],
+      "replications_run": 30,
+      "replications_skipped_resume": 0,
+      "wall_time_sec": 1447.777574414995
+    },
+    {
+      "finished_at_utc": "2026-11-07T06:13:36+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--condition-id",
+        "c05",
+        "c06",
+        "--resume"
+      ],
+      "conditions": [
+        "c05",
+        "c06"
+      ],
+      "replications_run": 60,
+      "replications_skipped_resume": 0,
+      "wall_time_sec": 2792.865591912003
+    },
+    {
+      "finished_at_utc": "2026-11-07T07:24:02+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--condition-id",
+        "c02",
+        "--resume",
+        "--max-new-reps",
+        "5"
+      ],
+      "conditions": [
+        "c02"
+      ],
+      "replications_run": 5,
+      "replications_skipped_resume": 0,
+      "max_new_reps": 5,
+      "replications_pending_after": 25,
+      "wall_time_sec": 3704.6155172499966
+    },
+    {
+      "finished_at_utc": "2026-11-07T08:33:30+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--condition-id",
+        "c02",
+        "--resume",
+        "--max-new-reps",
+        "5"
+      ],
+      "conditions": [
+        "c02"
+      ],
+      "replications_run": 5,
+      "replications_skipped_resume": 5,
+      "max_new_reps": 5,
+      "replications_pending_after": 20,
+      "wall_time_sec": 3705.5903628739907
+    },
+    {
+      "finished_at_utc": "2026-11-07T09:39:01+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--condition-id",
+        "c02",
+        "--resume",
+        "--max-new-reps",
+        "5"
+      ],
+      "conditions": [
+        "c02"
+      ],
+      "replications_run": 5,
+      "replications_skipped_resume": 10,
+      "max_new_reps": 5,
+      "replications_pending_after": 15,
+      "wall_time_sec": 3721.592061790012
+    },
+    {
+      "finished_at_utc": "2026-11-07T10:40:42+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--condition-id",
+        "c02",
+        "--resume",
+        "--max-new-reps",
+        "5"
+      ],
+      "conditions": [
+        "c02"
+      ],
+      "replications_run": 5,
+      "replications_skipped_resume": 15,
+      "max_new_reps": 5,
+      "replications_pending_after": 10,
+      "wall_time_sec": 3696.145467081995
+    },
+    {
+      "finished_at_utc": "2026-11-07T11:42:23+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--condition-id",
+        "c02",
+        "--resume",
+        "--max-new-reps",
+        "5"
+      ],
+      "conditions": [
+        "c02"
+      ],
+      "replications_run": 5,
+      "replications_skipped_resume": 20,
+      "max_new_reps": 5,
+      "replications_pending_after": 5,
+      "wall_time_sec": 3698.053779665999
+    },
+    {
+      "finished_at_utc": "2026-11-07T12:44:17+00:00",
+      "argv": [
+        "--tag",
+        "formal",
+        "--condition-id",
+        "c02",
+        "--resume",
+        "--max-new-reps",
+        "5"
+      ],
+      "conditions": [
+        "c02"
+      ],
+      "replications_run": 5,
+      "replications_skipped_resume": 25,
+      "max_new_reps": 5,
+      "replications_pending_after": 0,
+      "wall_time_sec": 3707.3835019160033
+    }
+  ],
+  "design": "ofat",
+  "baseline": {
+    "n": 10000,
+    "treat_prob": 0.5,
+    "effect": "linear",
+    "noise_sd": 1.0
+  },
+  "only_baseline": false,
+  "n_reps": 30,
+  "n_conditions_in_design": 7,
+  "conditions_completed": [
+    "c00",
+    "c01",
+    "c02",
+    "c03",
+    "c04",
+    "c05",
+    "c06"
+  ],
+  "conditions": [
+    {
+      "condition_id": "c00",
+      "n": 1000,
+      "treat_prob": 0.5,
+      "effect": "linear",
+      "noise_sd": 1.0,
+      "experiments": "sample_size"
+    },
+    {
+      "condition_id": "c01",
+      "n": 10000,
+      "treat_prob": 0.5,
+      "effect": "linear",
+      "noise_sd": 1.0,
+      "experiments": "sample_size|treat_ratio|complexity"
+    },
+    {
+      "condition_id": "c02",
+      "n": 100000,
+      "treat_prob": 0.5,
+      "effect": "linear",
+      "noise_sd": 1.0,
+      "experiments": "sample_size"
+    },
+    {
+      "condition_id": "c03",
+      "n": 10000,
+      "treat_prob": 0.3,
+      "effect": "linear",
+      "noise_sd": 1.0,
+      "experiments": "treat_ratio"
+    },
+    {
+      "condition_id": "c04",
+      "n": 10000,
+      "treat_prob": 0.1,
+      "effect": "linear",
+      "noise_sd": 1.0,
+      "experiments": "treat_ratio"
+    },
+    {
+      "condition_id": "c05",
+      "n": 10000,
+      "treat_prob": 0.5,
+      "effect": "nonlinear",
+      "noise_sd": 1.0,
+      "experiments": "complexity"
+    },
+    {
+      "condition_id": "c06",
+      "n": 10000,
+      "treat_prob": 0.5,
+      "effect": "interaction",
+      "noise_sd": 1.0,
+      "experiments": "complexity"
+    }
+  ],
+  "seeds": {
+    "data_seed_base": 42,
+    "model_seed_base": 1000,
+    "rule": "data_seed = data_seed_base + rep (data + split); model_seed = model_seed_base + rep"
+  },
+  "confidence_level": 0.95,
+  "ci_method": "mean +/- t_{(1+level)/2, k-1} * sd / sqrt(k) over replications",
+  "models_config": {
+    "base_learner": {
+      "n_estimators": 200,
+      "min_samples_leaf": 5,
+      "max_features": 1.0,
+      "n_jobs": 1
+    },
+    "x_learner": {
+      "propensity": null
+    },
+    "causal_forest": {
+      "n_estimators": 1000,
+      "min_samples_leaf": 5,
+      "max_features": 1.0,
+      "honest": true,
+      "cv": 5,
+      "propensity_model": "constant",
+      "n_jobs": 1
+    },
+    "split": {
+      "test_size": 0.2,
+      "stratify": "T"
+    }
+  },
+  "reference_model": "Constant ATE: training difference-in-means applied to every test unit",
+  "fits_per_replication": {
+    "estimators": 3,
+    "T-Learner": 2,
+    "X-Learner": 4,
+    "Causal Forest": 11
+  },
+  "paired_method": "diff = RMSE(a) - RMSE(b) matched on (condition, rep); paired t CI; Holm within condition",
+  "outputs": {
+    "runs": "formal_runs.csv",
+    "summary": "formal_summary.csv",
+    "paired": "formal_paired.csv"
+  },
+  "environment": {
+    "python": "3.13.9",
+    "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "econml": "0.17.0",
+    "scipy": "1.18.1"
+  }
+}

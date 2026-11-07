@@ -1,0 +1,31 @@
+# Repeated simulation experiment (STEP 4 formal plan).
+# History: STEP 3 trial / STEP 3-1 probes used baseline n=1000; the formal plan uses n=10000.
+# Earlier runs record their exact conditions in results/tables/*_metadata.json.
+# Model hyperparameters and the train/test split come from configs/models.yaml (unchanged).
+
+# Reference condition; each one-factor-at-a-time (OFAT) experiment varies one factor around it.
+baseline:
+  n: 10000
+  treat_prob: 0.5
+  effect: linear
+  noise_sd: 1.0
+
+# Levels per factor. design=ofat -> 3 experiments x 3 levels, sharing the baseline (7 unique conditions)
+#                    design=full -> full factorial (27 conditions)
+factors:
+  n: [1000, 10000, 100000]
+  treat_prob: [0.5, 0.3, 0.1]
+  effect: [linear, nonlinear, interaction]
+
+design: ofat
+n_reps: 30
+
+# Replication r uses data seed = data_seed_base + r (data generation AND train/test split)
+# and model seed = model_seed_base + r (all estimators). Every model inside replication r
+# sees the identical dataset and split; different replications draw independent data.
+seeds:
+  data_seed_base: 42
+  model_seed_base: 1000
+
+confidence_level: 0.95
+output_dir: results/tables

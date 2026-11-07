@@ -1,0 +1,13 @@
+condition_id,factor,condition_label,n,treat_prob,effect,model,n_reps,rmse_mean,rmse_sd,rmse_ci_low,rmse_ci_high,rmse_ci_halfwidth,mae_mean,mae_sd
+c01,treatment_ratio,"n=10,000 / p=0.5 / linear",10000,0.500000,linear,T-Learner,30,0.281555,0.011223,0.277364,0.285746,0.004191,0.222235,0.009312
+c01,treatment_ratio,"n=10,000 / p=0.5 / linear",10000,0.500000,linear,X-Learner,30,0.175927,0.009568,0.172354,0.179499,0.003573,0.138801,0.007817
+c01,treatment_ratio,"n=10,000 / p=0.5 / linear",10000,0.500000,linear,Causal Forest,30,0.106659,0.014359,0.101298,0.112021,0.005362,0.079615,0.011485
+c01,treatment_ratio,"n=10,000 / p=0.5 / linear",10000,0.500000,linear,Constant ATE,30,0.301426,0.005107,0.299519,0.303333,0.001907,0.240471,0.004119
+c03,treatment_ratio,"n=10,000 / p=0.3 / linear",10000,0.300000,linear,T-Learner,30,0.286096,0.010502,0.282175,0.290018,0.003922,0.226202,0.008448
+c03,treatment_ratio,"n=10,000 / p=0.3 / linear",10000,0.300000,linear,X-Learner,30,0.187530,0.009727,0.183898,0.191162,0.003632,0.147628,0.007004
+c03,treatment_ratio,"n=10,000 / p=0.3 / linear",10000,0.300000,linear,Causal Forest,30,0.111945,0.013377,0.106950,0.116940,0.004995,0.083001,0.009377
+c03,treatment_ratio,"n=10,000 / p=0.3 / linear",10000,0.300000,linear,Constant ATE,30,0.300517,0.004807,0.298723,0.302312,0.001795,0.239946,0.004547
+c04,treatment_ratio,"n=10,000 / p=0.1 / linear",10000,0.100000,linear,T-Learner,30,0.319468,0.013636,0.314377,0.324560,0.005092,0.253018,0.010980
+c04,treatment_ratio,"n=10,000 / p=0.1 / linear",10000,0.100000,linear,X-Learner,30,0.232929,0.012572,0.228234,0.237623,0.004695,0.184519,0.010813
+c04,treatment_ratio,"n=10,000 / p=0.1 / linear",10000,0.100000,linear,Causal Forest,30,0.158680,0.020348,0.151082,0.166278,0.007598,0.121505,0.017126
+c04,treatment_ratio,"n=10,000 / p=0.1 / linear",10000,0.100000,linear,Constant ATE,30,0.301790,0.005346,0.299793,0.303786,0.001996,0.240925,0.004646

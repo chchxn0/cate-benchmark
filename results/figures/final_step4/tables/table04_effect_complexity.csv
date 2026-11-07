@@ -1,0 +1,5 @@
+model,linear_mean,linear_sd,nonlinear†_mean,nonlinear†_sd,interaction_mean,interaction_sd,pct_change 변화율 linear→nonlinear,p_holm_8 변화율 linear→nonlinear,pct_change 변화율 linear→interaction,p_holm_8 변화율 linear→interaction
+T-Learner,0.281555,0.011223,0.302924,0.012259,0.291591,0.014642,7.5897,1.37259e-12,3.56442,2.13539e-06
+X-Learner,0.175927,0.009568,0.203376,0.009757,0.217069,0.017201,15.6025,6.36332e-14,23.3862,1.60688e-13
+Causal Forest,0.106659,0.014359,0.208948,0.018004,0.242203,0.014356,95.9018,7.8432e-21,127.081,4.3704e-24
+Constant ATE,0.301426,0.005107,0.301342,0.006569,0.302126,0.009624,-0.0279566,1,0.232127,1

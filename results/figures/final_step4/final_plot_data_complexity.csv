@@ -1,0 +1,13 @@
+condition_id,factor,condition_label,n,treat_prob,effect,model,n_reps,rmse_mean,rmse_sd,rmse_ci_low,rmse_ci_high,rmse_ci_halfwidth,mae_mean,mae_sd
+c01,effect_complexity,"n=10,000 / p=0.5 / linear",10000,0.500000,linear,T-Learner,30,0.281555,0.011223,0.277364,0.285746,0.004191,0.222235,0.009312
+c01,effect_complexity,"n=10,000 / p=0.5 / linear",10000,0.500000,linear,X-Learner,30,0.175927,0.009568,0.172354,0.179499,0.003573,0.138801,0.007817
+c01,effect_complexity,"n=10,000 / p=0.5 / linear",10000,0.500000,linear,Causal Forest,30,0.106659,0.014359,0.101298,0.112021,0.005362,0.079615,0.011485
+c01,effect_complexity,"n=10,000 / p=0.5 / linear",10000,0.500000,linear,Constant ATE,30,0.301426,0.005107,0.299519,0.303333,0.001907,0.240471,0.004119
+c05,effect_complexity,"n=10,000 / p=0.5 / nonlinear",10000,0.500000,nonlinear,T-Learner,30,0.302924,0.012259,0.298347,0.307502,0.004578,0.237568,0.009660
+c05,effect_complexity,"n=10,000 / p=0.5 / nonlinear",10000,0.500000,nonlinear,X-Learner,30,0.203376,0.009757,0.199733,0.207019,0.003643,0.157501,0.007539
+c05,effect_complexity,"n=10,000 / p=0.5 / nonlinear",10000,0.500000,nonlinear,Causal Forest,30,0.208948,0.018004,0.202225,0.215671,0.006723,0.161957,0.018203
+c05,effect_complexity,"n=10,000 / p=0.5 / nonlinear",10000,0.500000,nonlinear,Constant ATE,30,0.301342,0.006569,0.298889,0.303795,0.002453,0.236644,0.003629
+c06,effect_complexity,"n=10,000 / p=0.5 / interaction",10000,0.500000,interaction,T-Learner,30,0.291591,0.014642,0.286123,0.297058,0.005467,0.227214,0.010881
+c06,effect_complexity,"n=10,000 / p=0.5 / interaction",10000,0.500000,interaction,X-Learner,30,0.217069,0.017201,0.210646,0.223492,0.006423,0.157209,0.010844
+c06,effect_complexity,"n=10,000 / p=0.5 / interaction",10000,0.500000,interaction,Causal Forest,30,0.242203,0.014356,0.236843,0.247564,0.005361,0.157412,0.009278
+c06,effect_complexity,"n=10,000 / p=0.5 / interaction",10000,0.500000,interaction,Constant ATE,30,0.302126,0.009624,0.298532,0.305720,0.003594,0.194792,0.004945

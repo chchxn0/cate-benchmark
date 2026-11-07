@@ -1,0 +1,22 @@
+# Synthetic data configuration for the CATE benchmark.
+# `default` is used by scripts/generate_data.py unless overridden on the command line.
+default:
+  n: 1000
+  treat_prob: 0.5
+  effect: linear        # linear | nonlinear | interaction
+  seed: 42
+  noise_sd: 1.0
+
+# Full experimental grid (3 x 3 x 3 = 27 conditions).
+# Not executed yet; reserved for the model-comparison stage.
+grid:
+  n: [1000, 10000, 100000]
+  treat_prob: [0.5, 0.3, 0.1]
+  effect: [linear, nonlinear, interaction]
+
+# Sample size used to report effect-function diagnostics on a large reference draw.
+diagnostics:
+  reference_n: 200000
+
+output:
+  synthetic_dir: data/synthetic

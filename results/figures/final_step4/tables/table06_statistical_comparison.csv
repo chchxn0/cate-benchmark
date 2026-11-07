@@ -1,0 +1,10 @@
+condition_id,condition,model_a,model_b,diff_mean,diff_ci_low,diff_ci_high,p_value,p_holm,a_better_reps,n_pairs,significant_holm_0.05,ci_excludes_0,verdict
+c00,"n=1,000 / p=0.5 / linear",X-Learner,Causal Forest,0.0665254,0.0468456,0.0862051,1.34566e-07,2.69132e-07,1,30,True,True,CF 우세
+c01,"n=10,000 / p=0.5 / linear",X-Learner,Causal Forest,0.0692673,0.0639805,0.0745541,5.20284e-22,1.04057e-21,0,30,True,True,CF 우세
+c02,"n=100,000 / p=0.5 / linear",X-Learner,Causal Forest,0.0608568,0.0596117,0.0621019,2.28556e-38,2.28556e-38,0,30,True,True,CF 우세
+c03,"n=10,000 / p=0.3 / linear",X-Learner,Causal Forest,0.0755845,0.0693267,0.0818423,5.00035e-21,1.00007e-20,0,30,True,True,CF 우세
+c04,"n=10,000 / p=0.1 / linear",X-Learner,Causal Forest,0.0742489,0.0658122,0.0826857,2.7979e-17,5.5958e-17,0,30,True,True,CF 우세
+c05,"n=10,000 / p=0.5 / nonlinear",X-Learner,Causal Forest,-0.00557189,-0.0112194,7.56444e-05,0.0529452,0.10589,20,30,False,False,유의하지 않음
+c06,"n=10,000 / p=0.5 / interaction",X-Learner,Causal Forest,-0.025134,-0.028644,-0.021624,6.21837e-15,1.24367e-14,30,30,True,True,X 우세
+c04,"n=10,000 / p=0.1 / linear",T-Learner,Constant ATE,0.0176787,0.0121276,0.0232299,3.93439e-07,3.93439e-07,3,30,True,True,Constant ATE 우세
+c05,"n=10,000 / p=0.5 / nonlinear",T-Learner,Constant ATE,0.00158207,-0.00302247,0.0061866,0.487835,0.487835,12,30,False,False,유의하지 않음
