@@ -1,0 +1,57 @@
+family,condition_id,comparison,metric,diff,ci_low,ci_high,p_adj,a_better_reps,significant_0.05,source,pct_change
+"within-condition RMSE (paired t, Holm over 6 pairs)",c00,X-Learner - Causal Forest,rmse,0.0665254,0.0468456,0.0862051,2.69132e-07,1,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c00,T-Learner - X-Learner,rmse,0.104192,0.0944003,0.113984,9.86686e-19,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c00,T-Learner - Constant ATE,rmse,0.0713772,0.0564026,0.0863519,3.5161e-10,0,True,formal_paired.csv,
+"supplementary (STEP 6 re-analysis of formal_runs): MAE paired t, unadjusted",c00,X-Learner - Causal Forest,mae,0.057777,0.041127,0.074427,8.27555e-08,1,True,formal_runs.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c01,X-Learner - Causal Forest,rmse,0.0692673,0.0639805,0.0745541,1.04057e-21,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c01,T-Learner - X-Learner,rmse,0.105628,0.102282,0.108974,2.76124e-32,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c01,T-Learner - Constant ATE,rmse,-0.0198714,-0.0235607,-0.016182,7.03024e-12,29,True,formal_paired.csv,
+"supplementary (STEP 6 re-analysis of formal_runs): MAE paired t, unadjusted",c01,X-Learner - Causal Forest,mae,0.0591865,0.0553969,0.062976,3.75023e-24,0,True,formal_runs.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c02,X-Learner - Causal Forest,rmse,0.0608568,0.0596117,0.0621019,2.28556e-38,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c02,T-Learner - X-Learner,rmse,0.0981537,0.0971129,0.0991944,3.72057e-46,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c02,T-Learner - Constant ATE,rmse,-0.0786652,-0.0799924,-0.0773379,1.72693e-40,30,True,formal_paired.csv,
+"supplementary (STEP 6 re-analysis of formal_runs): MAE paired t, unadjusted",c02,X-Learner - Causal Forest,mae,0.0489819,0.0481902,0.0497736,2.4879e-41,0,True,formal_runs.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c03,X-Learner - Causal Forest,rmse,0.0755845,0.0693267,0.0818423,1.00007e-20,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c03,T-Learner - X-Learner,rmse,0.0985665,0.0952847,0.101848,1.45168e-31,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c03,T-Learner - Constant ATE,rmse,-0.0144211,-0.0184467,-0.0103956,4.52638e-08,29,True,formal_paired.csv,
+"supplementary (STEP 6 re-analysis of formal_runs): MAE paired t, unadjusted",c03,X-Learner - Causal Forest,mae,0.0646272,0.0607672,0.0684871,5.25023e-25,0,True,formal_runs.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c04,X-Learner - Causal Forest,rmse,0.0742489,0.0658122,0.0826857,5.5958e-17,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c04,T-Learner - X-Learner,rmse,0.0865398,0.0823989,0.0906807,5.73953e-27,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c04,T-Learner - Constant ATE,rmse,0.0176787,0.0121276,0.0232299,3.93439e-07,3,True,formal_paired.csv,
+"supplementary (STEP 6 re-analysis of formal_runs): MAE paired t, unadjusted",c04,X-Learner - Causal Forest,mae,0.0630138,0.0560412,0.0699863,1.37528e-17,0,True,formal_runs.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c05,X-Learner - Causal Forest,rmse,-0.00557189,-0.0112194,7.56444e-05,0.10589,20,False,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c05,T-Learner - X-Learner,rmse,0.0995484,0.0956739,0.103423,1.29047e-29,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c05,T-Learner - Constant ATE,rmse,0.00158207,-0.00302247,0.0061866,0.487835,12,False,formal_paired.csv,
+"supplementary (STEP 6 re-analysis of formal_runs): MAE paired t, unadjusted",c05,X-Learner - Causal Forest,mae,-0.00445639,-0.0102756,0.00136286,0.128141,18,False,formal_runs.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c06,X-Learner - Causal Forest,rmse,-0.025134,-0.028644,-0.021624,1.24367e-14,30,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c06,T-Learner - X-Learner,rmse,0.0745214,0.0691397,0.0799031,4.42909e-22,0,True,formal_paired.csv,
+"within-condition RMSE (paired t, Holm over 6 pairs)",c06,T-Learner - Constant ATE,rmse,-0.0105353,-0.0149258,-0.00614474,3.27923e-05,27,True,formal_paired.csv,
+"supplementary (STEP 6 re-analysis of formal_runs): MAE paired t, unadjusted",c06,X-Learner - Causal Forest,mae,-0.000203263,-0.00262923,0.0022227,0.865129,15,False,formal_runs.csv,
+sample size (Holm over 12),,"T-Learner: n=10,000 - n=1,000",rmse,-0.0982907,-0.113005,-0.083576,1.8233e-13,,True,formal_sample_size_comparison.csv,-25.8765
+sample size (Holm over 12),,"T-Learner: n=100,000 - n=10,000",rmse,-0.0604392,-0.0645233,-0.0563551,1.8844e-22,,True,formal_sample_size_comparison.csv,-21.4662
+sample size (Holm over 12),,"T-Learner: n=100,000 - n=1,000",rmse,-0.15873,-0.172866,-0.144594,3.37884e-19,,True,formal_sample_size_comparison.csv,-41.788
+sample size (Holm over 12),,"X-Learner: n=10,000 - n=1,000",rmse,-0.0997267,-0.117387,-0.0820663,9.13314e-12,,True,formal_sample_size_comparison.csv,-36.1783
+sample size (Holm over 12),,"X-Learner: n=100,000 - n=10,000",rmse,-0.0529646,-0.0565091,-0.0494202,1.56501e-22,,True,formal_sample_size_comparison.csv,-30.1061
+sample size (Holm over 12),,"X-Learner: n=100,000 - n=1,000",rmse,-0.152691,-0.169402,-0.13598,8.19706e-17,,True,formal_sample_size_comparison.csv,-55.3925
+sample size (Holm over 12),,"Causal Forest: n=10,000 - n=1,000",rmse,-0.102469,-0.116438,-0.0884995,2.00672e-14,,True,formal_sample_size_comparison.csv,-48.9981
+sample size (Holm over 12),,"Causal Forest: n=100,000 - n=10,000",rmse,-0.0445541,-0.049812,-0.0392962,5.36354e-16,,True,formal_sample_size_comparison.csv,-41.7723
+sample size (Holm over 12),,"Causal Forest: n=100,000 - n=1,000",rmse,-0.147023,-0.159945,-0.1341,2.61442e-19,,True,formal_sample_size_comparison.csv,-70.3028
+sample size (Holm over 12),,"Constant ATE: n=10,000 - n=1,000",rmse,-0.00704209,-0.0143658,0.00028157,0.11773,,False,formal_sample_size_comparison.csv,-2.28292
+sample size (Holm over 12),,"Constant ATE: n=100,000 - n=10,000",rmse,-0.00164541,-0.00377689,0.000486081,0.125225,,False,formal_sample_size_comparison.csv,-0.545874
+sample size (Holm over 12),,"Constant ATE: n=100,000 - n=1,000",rmse,-0.0086875,-0.0159851,-0.0013899,0.0638617,,False,formal_sample_size_comparison.csv,-2.81633
+treatment ratio (Holm over 8),,T-Learner: c03(p=0.3) - c01(p=0.5),rmse,0.00454137,-0.00111487,0.0101976,0.33411,,False,formal_treat_ratio_comparison.csv,1.61296
+treatment ratio (Holm over 8),,T-Learner: c04(p=0.1) - c01(p=0.5),rmse,0.0379135,0.0314614,0.0443656,5.24101e-12,,True,formal_treat_ratio_comparison.csv,13.4658
+treatment ratio (Holm over 8),,X-Learner: c03(p=0.3) - c01(p=0.5),rmse,0.0116031,0.00711045,0.0160957,5.78913e-05,,True,formal_treat_ratio_comparison.csv,6.59541
+treatment ratio (Holm over 8),,X-Learner: c04(p=0.1) - c01(p=0.5),rmse,0.057002,0.0514,0.062604,4.46159e-18,,True,formal_treat_ratio_comparison.csv,32.401
+treatment ratio (Holm over 8),,Causal Forest: c03(p=0.3) - c01(p=0.5),rmse,0.0052859,-0.000415336,0.0109871,0.271728,,False,formal_treat_ratio_comparison.csv,4.95587
+treatment ratio (Holm over 8),,Causal Forest: c04(p=0.1) - c01(p=0.5),rmse,0.0520204,0.0450422,0.0589986,1.54278e-14,,True,formal_treat_ratio_comparison.csv,48.7725
+treatment ratio (Holm over 8),,Constant ATE: c03(p=0.3) - c01(p=0.5),rmse,-0.000908879,-0.00311097,0.00129322,0.811007,,False,formal_treat_ratio_comparison.csv,-0.301526
+treatment ratio (Holm over 8),,Constant ATE: c04(p=0.1) - c01(p=0.5),rmse,0.000363383,-0.00232324,0.00305001,0.811007,,False,formal_treat_ratio_comparison.csv,0.120555
+effect structure (Holm over 8),,T-Learner: c05(nonlinear) - c01(linear),rmse,0.0213692,0.0178689,0.0248694,1.37259e-12,,True,formal_complexity_comparison.csv,7.5897
+effect structure (Holm over 8),,T-Learner: c06(interaction) - c01(linear),rmse,0.0100358,0.00677508,0.0132965,2.13539e-06,,True,formal_complexity_comparison.csv,3.56442
+effect structure (Holm over 8),,X-Learner: c05(nonlinear) - c01(linear),rmse,0.027449,0.0235349,0.0313632,6.36332e-14,,True,formal_complexity_comparison.csv,15.6025
+effect structure (Holm over 8),,X-Learner: c06(interaction) - c01(linear),rmse,0.0411426,0.0350141,0.0472712,1.60688e-13,,True,formal_complexity_comparison.csv,23.3862
+effect structure (Holm over 8),,Causal Forest: c05(nonlinear) - c01(linear),rmse,0.102288,0.0942634,0.110313,7.8432e-21,,True,formal_complexity_comparison.csv,95.9018
+effect structure (Holm over 8),,Causal Forest: c06(interaction) - c01(linear),rmse,0.135544,0.127437,0.143651,4.3704e-24,,True,formal_complexity_comparison.csv,127.081
+effect structure (Holm over 8),,Constant ATE: c05(nonlinear) - c01(linear),rmse,-8.42686e-05,-0.00195892,0.00179038,1,,False,formal_complexity_comparison.csv,-0.0279566
+effect structure (Holm over 8),,Constant ATE: c06(interaction) - c01(linear),rmse,0.000699692,-0.00240856,0.00380794,1,,False,formal_complexity_comparison.csv,0.232127

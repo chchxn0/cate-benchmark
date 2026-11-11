@@ -1,0 +1,299 @@
+{
+  "created_at_utc": "2026-11-11T11:44:40+00:00",
+  "step": "STEP 5-2 data split and evaluation pipeline preparation (no model training)",
+  "data": {
+    "path": "data/criteo/criteo-research-uplift-v2.1.csv.gz",
+    "sha256": "2716e1bf0fd157a93b5bf86924d9088419dfbac2022c6cd90030220634f616dc",
+    "n_rows": 13979592
+  },
+  "research_variables": {
+    "X": [
+      "f0",
+      "f1",
+      "f2",
+      "f3",
+      "f4",
+      "f5",
+      "f6",
+      "f7",
+      "f8",
+      "f9",
+      "f10",
+      "f11"
+    ],
+    "T": "treatment",
+    "Y": "conversion",
+    "estimand": "ITT of campaign assignment",
+    "never_used_as_X_or_T": [
+      "visit",
+      "exposure"
+    ]
+  },
+  "split_design": {
+    "seed": 42,
+    "rng": "numpy.random.default_rng(42); one permutation per stratum, strata in order 0..3",
+    "strata": "2 * treatment + conversion (0: T0Y0, 1: T0Y1, 2: T1Y0, 3: T1Y1)",
+    "allocation": "largest remainder, proportional to full-data stratum counts",
+    "order": "per stratum permutation -> first test, then validation, rest = training pool (random order)",
+    "test_frac": 0.2,
+    "valid_frac": 0.2,
+    "train_sizes": [
+      100000,
+      300000,
+      1000000
+    ],
+    "nested": "train_100000 ⊂ train_300000 ⊂ train_1000000 ⊂ train_pool (prefixes of the pool order)",
+    "row_numbers": "0-based data-row positions in the CSV (header excluded)",
+    "usage": "test: final evaluation only, once; valid: model / setting choices; train_*: fitting only. Validation rows are never fitted.",
+    "duplicates": "identical feature rows may fall into different splits; not removed (no user id)"
+  },
+  "allocation_by_stratum": [
+    {
+      "stratum": 0,
+      "treatment": 0,
+      "conversion": 0,
+      "population": 2092874,
+      "alloc_test": 418575,
+      "alloc_valid": 418575,
+      "alloc_train_100000": 14971,
+      "alloc_train_300000": 44913,
+      "alloc_train_1000000": 149709
+    },
+    {
+      "stratum": 1,
+      "treatment": 0,
+      "conversion": 1,
+      "population": 4063,
+      "alloc_test": 813,
+      "alloc_valid": 813,
+      "alloc_train_100000": 29,
+      "alloc_train_300000": 87,
+      "alloc_train_1000000": 291
+    },
+    {
+      "stratum": 2,
+      "treatment": 1,
+      "conversion": 0,
+      "population": 11845944,
+      "alloc_test": 2369188,
+      "alloc_valid": 2369188,
+      "alloc_train_100000": 84737,
+      "alloc_train_300000": 254212,
+      "alloc_train_1000000": 847374
+    },
+    {
+      "stratum": 3,
+      "treatment": 1,
+      "conversion": 1,
+      "population": 36711,
+      "alloc_test": 7342,
+      "alloc_valid": 7342,
+      "alloc_train_100000": 263,
+      "alloc_train_300000": 788,
+      "alloc_train_1000000": 2626
+    }
+  ],
+  "index_files": {
+    "test": {
+      "path": "data/criteo/splits/test.npy",
+      "n_rows": 2795918,
+      "dtype": "int32",
+      "sorted": true,
+      "bytes": 11183800,
+      "sha256": "46af8d990616e757a70ffabf5ea5ae26149b3d6b0d71ececcd116bb2ef4902e9",
+      "status": "existing file verified identical (not rewritten)"
+    },
+    "valid": {
+      "path": "data/criteo/splits/valid.npy",
+      "n_rows": 2795918,
+      "dtype": "int32",
+      "sorted": true,
+      "bytes": 11183800,
+      "sha256": "e703db7dbd21e7c0067256ad2656079a183562516fc6d585bc2b7593e15baba0",
+      "status": "existing file verified identical (not rewritten)"
+    },
+    "train_pool": {
+      "path": "data/criteo/splits/train_pool.npy",
+      "n_rows": 8387756,
+      "dtype": "int32",
+      "sorted": true,
+      "bytes": 33551152,
+      "sha256": "56570fa165cece6409342fd2861f2e6ac55e7354e95105618993c1ed71816380",
+      "status": "existing file verified identical (not rewritten)"
+    },
+    "train_100000": {
+      "path": "data/criteo/splits/train_100000.npy",
+      "n_rows": 100000,
+      "dtype": "int32",
+      "sorted": true,
+      "bytes": 400128,
+      "sha256": "3ebe9ebeec8f3872a044904a3ffee0a483b219ebee9e335a6b010e74de6e2272",
+      "status": "existing file verified identical (not rewritten)"
+    },
+    "train_300000": {
+      "path": "data/criteo/splits/train_300000.npy",
+      "n_rows": 300000,
+      "dtype": "int32",
+      "sorted": true,
+      "bytes": 1200128,
+      "sha256": "0c80d8c8c343aa016542ad7e26e95fc4e8f6ff7c27c6b990eed7d2631308c584",
+      "status": "existing file verified identical (not rewritten)"
+    },
+    "train_1000000": {
+      "path": "data/criteo/splits/train_1000000.npy",
+      "n_rows": 1000000,
+      "dtype": "int32",
+      "sorted": true,
+      "bytes": 4000128,
+      "sha256": "857e97f371f59b9fbd094caf6bfe7b87d09b3e41903bd9c5649924305659ec46",
+      "status": "existing file verified identical (not rewritten)"
+    }
+  },
+  "checks": {
+    "no_duplicate_indices": {
+      "test": true,
+      "valid": true,
+      "train_pool": true,
+      "train_100000": true,
+      "train_300000": true,
+      "train_1000000": true
+    },
+    "in_range": {
+      "test": true,
+      "valid": true,
+      "train_pool": true,
+      "train_100000": true,
+      "train_300000": true,
+      "train_1000000": true
+    },
+    "intersection_sizes": {
+      "test&valid": 0,
+      "test&train_pool": 0,
+      "valid&train_pool": 0,
+      "train_100000&test": 0,
+      "train_100000&valid": 0,
+      "train_300000&test": 0,
+      "train_300000&valid": 0,
+      "train_1000000&test": 0,
+      "train_1000000&valid": 0
+    },
+    "test_valid_pool_partition_all_rows": true,
+    "nested": {
+      "train_100000⊂train_300000": true,
+      "train_300000⊂train_1000000": true,
+      "train_1000000⊂train_pool": true
+    },
+    "all_ok": true
+  },
+  "feature_smd_vs_full": {
+    "full": {
+      "f0": 0.0,
+      "f1": 0.0,
+      "f2": 0.0,
+      "f3": 0.0,
+      "f4": 0.0,
+      "f5": 0.0,
+      "f6": 0.0,
+      "f7": 0.0,
+      "f8": 0.0,
+      "f9": 0.0,
+      "f10": 0.0,
+      "f11": 0.0
+    },
+    "test": {
+      "f0": 6.4e-05,
+      "f1": 0.000625,
+      "f2": 0.000416,
+      "f3": 7.5e-05,
+      "f4": 0.000591,
+      "f5": -0.000349,
+      "f6": -2.6e-05,
+      "f7": -0.000314,
+      "f8": 8e-06,
+      "f9": -0.000405,
+      "f10": 0.000426,
+      "f11": -0.000418
+    },
+    "valid": {
+      "f0": 0.000144,
+      "f1": 1.7e-05,
+      "f2": -8e-06,
+      "f3": 0.000524,
+      "f4": -0.000512,
+      "f5": -0.00041,
+      "f6": -0.000351,
+      "f7": 0.00032,
+      "f8": -9.7e-05,
+      "f9": -2.4e-05,
+      "f10": -0.000587,
+      "f11": 0.000767
+    },
+    "train_pool": {
+      "f0": -6.9e-05,
+      "f1": -0.000214,
+      "f2": -0.000136,
+      "f3": -0.0002,
+      "f4": -2.7e-05,
+      "f5": 0.000253,
+      "f6": 0.000126,
+      "f7": -2e-06,
+      "f8": 3e-05,
+      "f9": 0.000143,
+      "f10": 5.4e-05,
+      "f11": -0.000116
+    },
+    "train_100000": {
+      "f0": -0.003522,
+      "f1": -0.002813,
+      "f2": 0.001071,
+      "f3": 0.004012,
+      "f4": 0.001562,
+      "f5": -0.001301,
+      "f6": 0.005382,
+      "f7": 0.001671,
+      "f8": -0.000954,
+      "f9": 0.000529,
+      "f10": -0.002415,
+      "f11": -5.2e-05
+    },
+    "train_300000": {
+      "f0": -0.002262,
+      "f1": -0.00155,
+      "f2": 0.002676,
+      "f3": -0.001184,
+      "f4": 0.000693,
+      "f5": 0.000734,
+      "f6": -2e-05,
+      "f7": 7.2e-05,
+      "f8": -0.002335,
+      "f9": 0.001735,
+      "f10": -0.000837,
+      "f11": -0.001743
+    },
+    "train_1000000": {
+      "f0": -0.001511,
+      "f1": -8.7e-05,
+      "f2": 0.001302,
+      "f3": -0.001814,
+      "f4": 0.001264,
+      "f5": 0.000376,
+      "f6": -0.000516,
+      "f7": 0.000133,
+      "f8": -0.001116,
+      "f9": 0.000492,
+      "f10": 0.000581,
+      "f11": -3.9e-05
+    }
+  },
+  "processing": {
+    "chunksize": 1000000,
+    "peak_rss_mb": 1710.546875,
+    "wall_time_sec": 26.80804495800021
+  },
+  "environment": {
+    "python": "3.13.9",
+    "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3"
+  }
+}

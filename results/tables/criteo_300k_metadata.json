@@ -1,0 +1,118 @@
+{
+  "created_at_utc": "2026-11-11T12:56:02+00:00",
+  "tag": "300k",
+  "step": "STEP 5-3 pilot (validation only; final test never loaded)",
+  "config_file": "configs/criteo_models.yaml",
+  "config": {
+    "seed": 42,
+    "base_learner": {
+      "n_estimators": 200,
+      "min_samples_leaf": 5,
+      "max_features": 1.0,
+      "n_jobs": 1
+    },
+    "x_learner": {
+      "propensity": null
+    },
+    "causal_forest": {
+      "n_estimators": 1000,
+      "min_samples_leaf": 5,
+      "max_features": 1.0,
+      "honest": true,
+      "cv": 5,
+      "propensity_model": "constant",
+      "n_jobs": 1
+    },
+    "prediction": {
+      "batch_size": 200000,
+      "subset_size": 50000,
+      "subset_seed": 42,
+      "max_full_predict_minutes": 120
+    }
+  },
+  "model_descriptions": {
+    "T-Learner": {
+      "estimator": "src.models.TLearner",
+      "base_learner": "RandomForestRegressor",
+      "base_learner_params": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": null,
+        "max_features": 1.0,
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 1,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      }
+    },
+    "X-Learner": {
+      "estimator": "src.models.XLearner",
+      "base_learner": "RandomForestRegressor",
+      "base_learner_params": {
+        "bootstrap": true,
+        "ccp_alpha": 0.0,
+        "criterion": "squared_error",
+        "max_depth": null,
+        "max_features": 1.0,
+        "max_leaf_nodes": null,
+        "max_samples": null,
+        "min_impurity_decrease": 0.0,
+        "min_samples_leaf": 5,
+        "min_samples_split": 2,
+        "min_weight_fraction_leaf": 0.0,
+        "monotonic_cst": null,
+        "n_estimators": 200,
+        "n_jobs": 1,
+        "oob_score": false,
+        "random_state": 42,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "propensity": 0.85,
+      "weighting": "tau = e*tau0 + (1-e)*tau1"
+    },
+    "Causal Forest": {
+      "estimator": "econml.dml.CausalForestDML",
+      "model_y": "RandomForestRegressor({'n_estimators': 200, 'min_samples_leaf': 5, 'max_features': 1.0, 'n_jobs': 1}, random_state=42)",
+      "model_t": "DummyClassifier(strategy='prior')",
+      "discrete_treatment": true,
+      "cv": 5,
+      "n_estimators": 1000,
+      "min_samples_leaf": 5,
+      "max_features": 1.0,
+      "honest": true,
+      "n_jobs": 1,
+      "random_state": 42
+    }
+  },
+  "evaluation": {
+    "split": "valid",
+    "n": 2795918,
+    "n_grid": 100,
+    "estimator": "ratio (ipw reported as check)",
+    "definitions": "see src/criteo_evaluation.py and docs/criteo_step5_2_report.md"
+  },
+  "artifacts": {
+    "models": "data/criteo/models/300k",
+    "predictions": "data/criteo/predictions/300k"
+  },
+  "environment": {
+    "python": "3.13.9",
+    "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "econml": "0.17.0",
+    "joblib": "1.6.0"
+  }
+}

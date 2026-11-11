@@ -1,0 +1,44 @@
+{
+  "created_at_utc": "2026-11-11T13:26:20+00:00",
+  "step": "STEP 5-5 validation bootstrap (saved predictions; no training; test split never loaded)",
+  "n_boot": 1000,
+  "seed": 42,
+  "n_valid": 2795918,
+  "resampling": "stratified by treatment, with replacement, group sizes fixed; identical draws for all score vectors",
+  "evaluation": "src/criteo_evaluation.py (STEP 5-2 definitions: ratio estimator, 101-point grid, tie-block interpolation)",
+  "ci": "percentile; paired differences also with Bonferroni over 3 model pairs per metric (98.33% percentile)",
+  "score_vectors": [
+    "300k:T",
+    "300k:X",
+    "300k:CF",
+    "100k:T",
+    "100k:X",
+    "100k:CF",
+    "Random"
+  ],
+  "verification": {
+    "300k:CF all-one weights == unweighted": true,
+    "300k:CF weighted draw == duplicated rows": true,
+    "300k:CF draw keeps group sizes": true,
+    "300k:T all-one weights == unweighted": true,
+    "300k:T weighted draw == duplicated rows": true,
+    "300k:T draw keeps group sizes": true,
+    "paired_bootstrap == manual loop (B=2)": true
+  },
+  "nan_draws": {},
+  "max_undefined_grid_points_per_draw": {
+    "300k:T:n_undefined_points": 0,
+    "300k:X:n_undefined_points": 0,
+    "300k:CF:n_undefined_points": 0,
+    "100k:T:n_undefined_points": 0,
+    "100k:X:n_undefined_points": 0,
+    "100k:CF:n_undefined_points": 0,
+    "Random:n_undefined_points": 0
+  },
+  "draws_file": "data/criteo/bootstrap/validation_draws_B1000_seed42.csv.gz",
+  "timing_sec": {
+    "verification": 3.284225665998747,
+    "bootstrap": 356.05781779100107,
+    "total": 367.43801679199896
+  }
+}

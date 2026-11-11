@@ -1,0 +1,4 @@
+model,status,train_split,n_train,train_conv_treated,train_conv_control,fit_sec,peak_rss_after_fit_mb,peak_rss_mb,guard_sampled_peak_rss_mb,subset_predict_sec,subset_size,full_predict_sec,n_valid,model_file_mb,save_model_sec,load_train_sec,load_valid_sec,process_wall_sec,swap_used_before_mb,swap_used_after_mb
+T-Learner,ok,train_300000,300000,788,87,60.3056,581.141,1044.73,945.6,0.412281,50000,22.5446,2795918,4.39994,0.145719,9.32498,9.45084,106.884,0,0
+X-Learner,ok,train_300000,300000,788,87,176.57,710.109,1358.28,1262.2,1.08138,50000,56.6451,2795918,55.7857,1.38939,9.38863,9.7282,262.11,0,0
+Causal Forest,ok,train_300000,300000,788,87,726.093,3811.95,3811.95,3778.4,6.08565,50000,314.767,2795918,615.518,15.711,9.68316,9.40683,1118.94,0,0

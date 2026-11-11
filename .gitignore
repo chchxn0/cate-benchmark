@@ -21,14 +21,32 @@ results/tables/*
 !results/tables/.gitkeep
 !results/tables/formal_*.csv
 !results/tables/formal_*.json
+# Criteo STEP 5 summaries only (raw data, split indices and caches stay under data/criteo/, ignored)
+!results/tables/criteo_*.csv
+!results/tables/criteo_*.json
+# STEP 6 integrated summaries
+!results/tables/step6_*.csv
 
 results/figures/*
 !results/figures/.gitkeep
 !results/figures/final_step4/
 !results/figures/final_step4/**
+!results/figures/criteo_eda/
+!results/figures/criteo_eda/**
+!results/figures/criteo_pilot_100k/
+!results/figures/criteo_pilot_100k/**
+!results/figures/criteo_300k/
+!results/figures/criteo_300k/**
+!results/figures/criteo_300k_bootstrap/
+!results/figures/criteo_300k_bootstrap/**
+!results/figures/criteo_final_test/
+!results/figures/criteo_final_test/**
+!results/figures/step6_final/
+!results/figures/step6_final/**
 
 # OS / editor
 .DS_Store
 .vscode/
+.Rhistory
 
 results/tables/formal_c02_memory_*.csv

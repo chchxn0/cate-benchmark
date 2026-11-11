@@ -1,0 +1,43 @@
+comparison,train,metric,point_diff,boot_se,ci95_low,ci95_high,ci_bonf3_low,ci_bonf3_high,share_draws_diff_le_0,boot_p_two_sided,p_bonf3,ci95_excludes_0,ci_bonf3_excludes_0,n_nan_draws
+Causal Forest - X-Learner,300k,qini_coefficient,147.431,67.3545,20.4231,279.899,-8.08869,311.637,0.012,0.024,0.072,True,False,0
+Causal Forest - X-Learner,300k,auuc,173.651,78.9901,25.1281,329.38,-8.65224,366.211,0.012,0.024,0.072,True,False,0
+Causal Forest - X-Learner,300k,auuc_normalized,0.0539683,0.0254201,0.0077615,0.105318,-0.00261133,0.11929,0.012,0.024,0.072,True,False,0
+Causal Forest - X-Learner,300k,qini_normalized,0.0539051,0.0255,0.00741711,0.105225,-0.0028664,0.119311,0.012,0.024,0.072,True,False,0
+Causal Forest - X-Learner,300k,top10_incremental_conversions,162.723,88.1353,-0.222677,337.415,-38.7268,391.231,0.026,0.052,0.156,False,False,0
+Causal Forest - X-Learner,300k,top10_rate_diff,0.000582003,0.000315228,-7.96437e-07,0.00120681,-0.000138512,0.00139929,0.026,0.052,0.156,False,False,0
+Causal Forest - X-Learner,300k,top20_incremental_conversions,197.928,86.7092,36.9443,371.316,0.965708,410.449,0.009,0.018,0.054,True,True,0
+Causal Forest - X-Learner,300k,top20_rate_diff,0.000353959,0.000155064,6.60683e-05,0.000664032,1.727e-06,0.000734014,0.009,0.018,0.054,True,True,0
+Causal Forest - X-Learner,300k,top30_incremental_conversions,218.483,88.5055,45.1336,390.193,12.1408,432.193,0.008,0.016,0.048,True,True,0
+Causal Forest - X-Learner,300k,top30_rate_diff,0.000260478,0.000105518,5.38089e-05,0.000465194,1.44744e-05,0.000515267,0.008,0.016,0.048,True,True,0
+Causal Forest - T-Learner,300k,qini_coefficient,252.272,74.4239,108.256,399.21,79.093,426.234,0,0,0,True,True,0
+Causal Forest - T-Learner,300k,auuc,294.869,87.3062,125.518,467.231,91.7239,499.35,0,0,0,True,True,0
+Causal Forest - T-Learner,300k,auuc_normalized,0.0916409,0.0280317,0.039275,0.149342,0.0292372,0.159902,0,0,0,True,True,0
+Causal Forest - T-Learner,300k,qini_normalized,0.0922381,0.028111,0.03972,0.150229,0.0296604,0.160827,0,0,0,True,True,0
+Causal Forest - T-Learner,300k,top10_incremental_conversions,155.424,98.5846,-33.978,338.669,-66.4342,390.353,0.057,0.114,0.342,False,False,0
+Causal Forest - T-Learner,300k,top10_rate_diff,0.000555896,0.000352602,-0.000121527,0.0012113,-0.000237611,0.00139615,0.057,0.114,0.342,False,False,0
+Causal Forest - T-Learner,300k,top20_incremental_conversions,325.489,96.0553,138.837,509.927,111.33,547.239,0,0,0,True,True,0
+Causal Forest - T-Learner,300k,top20_rate_diff,0.000582078,0.000171778,0.000248286,0.000911913,0.000199093,0.000978639,0,0,0,True,True,0
+Causal Forest - T-Learner,300k,top30_incremental_conversions,370.705,96.0629,178.013,562.479,150.834,594.281,0,0,0,True,True,0
+Causal Forest - T-Learner,300k,top30_rate_diff,0.00044196,0.000114528,0.00021223,0.000670595,0.000179826,0.00070851,0,0,0,True,True,0
+X-Learner - T-Learner,300k,qini_coefficient,104.841,76.7197,-47.6371,251.811,-71.0582,285.625,0.089,0.178,0.534,False,False,0
+X-Learner - T-Learner,300k,auuc,121.217,89.9806,-58.4374,293.384,-85.3959,333.278,0.093,0.186,0.558,False,False,0
+X-Learner - T-Learner,300k,auuc_normalized,0.0376727,0.0279912,-0.0176714,0.0917236,-0.0264556,0.101133,0.093,0.186,0.558,False,False,0
+X-Learner - T-Learner,300k,qini_normalized,0.038333,0.0280734,-0.0169463,0.0924965,-0.0259329,0.102004,0.089,0.178,0.534,False,False,0
+X-Learner - T-Learner,300k,top10_incremental_conversions,-7.29924,98.7913,-198.014,183.15,-245.697,223.573,0.538,0.924,1,False,False,0
+X-Learner - T-Learner,300k,top10_rate_diff,-2.61068e-05,0.000353341,-0.000708227,0.000655064,-0.000878771,0.00079964,0.538,0.924,1,False,False,0
+X-Learner - T-Learner,300k,top20_incremental_conversions,127.561,98.7374,-62.9444,320.408,-109.875,351.674,0.11,0.22,0.66,False,False,0
+X-Learner - T-Learner,300k,top20_rate_diff,0.00022812,0.000176574,-0.000112565,0.000572993,-0.000196492,0.000628907,0.11,0.22,0.66,False,False,0
+X-Learner - T-Learner,300k,top30_incremental_conversions,152.222,102.487,-54.5604,349.102,-86.0158,408.229,0.068,0.136,0.408,False,False,0
+X-Learner - T-Learner,300k,top30_rate_diff,0.000181481,0.000122187,-6.50477e-05,0.000416204,-0.000102549,0.000486696,0.068,0.136,0.408,False,False,0
+T-Learner 300k - 100k,300k vs 100k,qini_coefficient,47.0508,86.3876,-125.389,216.683,,,0.291,0.582,,False,,0
+T-Learner 300k - 100k,300k vs 100k,auuc,54.9896,101.349,-146.983,254.01,,,0.291,0.582,,False,,0
+T-Learner 300k - 100k,300k vs 100k,auuc_normalized,0.01709,0.0316595,-0.048429,0.0773781,,,0.291,0.582,,False,,0
+T-Learner 300k - 100k,300k vs 100k,top10_incremental_conversions,103.067,111.895,-119.372,304.953,,,0.182,0.364,,False,,0
+X-Learner 300k - 100k,300k vs 100k,qini_coefficient,109.919,87.8973,-54.5686,281.104,,,0.109,0.218,,False,,0
+X-Learner 300k - 100k,300k vs 100k,auuc,127.448,103.047,-65.1691,328.584,,,0.112,0.224,,False,,0
+X-Learner 300k - 100k,300k vs 100k,auuc_normalized,0.0396089,0.0324598,-0.0214498,0.104662,,,0.112,0.224,,False,,0
+X-Learner 300k - 100k,300k vs 100k,top10_incremental_conversions,89.1675,114.036,-133.172,309.726,,,0.239,0.478,,False,,0
+Causal Forest 300k - 100k,300k vs 100k,qini_coefficient,272.025,90.3183,95.5753,445.139,,,0,0,,True,,0
+Causal Forest 300k - 100k,300k vs 100k,auuc,318.013,105.936,110.58,521.753,,,0,0,,True,,0
+Causal Forest 300k - 100k,300k vs 100k,auuc_normalized,0.098834,0.0330496,0.0345246,0.160845,,,0,0,,True,,0
+Causal Forest 300k - 100k,300k vs 100k,top10_incremental_conversions,266.129,115.035,49.761,494.156,,,0.004,0.008,,True,,0

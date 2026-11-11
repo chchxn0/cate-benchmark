@@ -1,0 +1,28 @@
+comparison,metric,role,point_diff,boot_se,ci95_low,ci95_high,ci_bonf3_low,ci_bonf3_high,boot_p_two_sided,p_bonf3,ci95_excludes_0,ci_bonf3_excludes_0,n_nan_draws
+Causal Forest - T-Learner,qini_coefficient,primary,286.198,79.7272,129.119,435.389,96.9809,472.233,0,0,True,True,0
+Causal Forest - T-Learner,auuc,secondary,334.209,93.4915,149.261,508.887,112.071,552.676,0,0,True,True,0
+Causal Forest - T-Learner,auuc_normalized,secondary,0.103867,0.0296004,0.0452247,0.16156,0.0352754,0.172798,0,0,True,True,0
+Causal Forest - T-Learner,top10_incremental_conversions,secondary,257.577,109.11,29.4548,466.185,-0.761993,502.574,0.018,0.054,True,False,0
+Causal Forest - T-Learner,top10_rate_diff,secondary,0.000921262,0.000390249,0.000105349,0.00166738,-2.72538e-06,0.00179753,0.018,0.054,True,False,0
+Causal Forest - T-Learner,top20_incremental_conversions,secondary,397.978,102.948,204.937,598.072,140.484,633.103,0,0,True,True,0
+Causal Forest - T-Learner,top20_rate_diff,secondary,0.000711713,0.000184104,0.000366494,0.00106955,0.000251231,0.00113219,0,0,True,True,0
+Causal Forest - T-Learner,top30_incremental_conversions,secondary,429.847,102.125,232.275,620.779,181.646,673.42,0,0,True,True,0
+Causal Forest - T-Learner,top30_rate_diff,secondary,0.000512469,0.000121755,0.000276921,0.000740101,0.000216561,0.000802861,0,0,True,True,0
+Causal Forest - X-Learner,qini_coefficient,primary,-6.29854,69.4935,-147.533,126.081,-176.242,157.243,0.926,1,False,False,0
+Causal Forest - X-Learner,auuc,secondary,-7.56279,81.4768,-173.217,147.875,-206.216,184.239,0.924,1,False,False,0
+Causal Forest - X-Learner,auuc_normalized,secondary,-0.00235041,0.0253321,-0.0523616,0.0455955,-0.0631065,0.0553457,0.924,1,False,False,0
+Causal Forest - X-Learner,top10_incremental_conversions,secondary,29.3163,91.9722,-153.869,206.023,-189.162,240.641,0.744,1,False,False,0
+Causal Forest - X-Learner,top10_rate_diff,secondary,0.000104854,0.000328952,-0.000550333,0.000736869,-0.000676565,0.000860688,0.744,1,False,False,0
+Causal Forest - X-Learner,top20_incremental_conversions,secondary,45.0019,91.1481,-141.996,222.844,-180.329,250.019,0.65,1,False,False,0
+Causal Forest - X-Learner,top20_rate_diff,secondary,8.04778e-05,0.000163002,-0.000253934,0.000398516,-0.000322486,0.000447115,0.65,1,False,False,0
+Causal Forest - X-Learner,top30_incremental_conversions,secondary,-16.4753,89.9167,-193.483,165.12,-245.426,200.881,0.828,1,False,False,0
+Causal Forest - X-Learner,top30_rate_diff,secondary,-1.96421e-05,0.0001072,-0.000230674,0.000196859,-0.0002926,0.000239493,0.828,1,False,False,0
+X-Learner - T-Learner,qini_coefficient,primary,292.496,77.6128,145.493,440.978,106.525,463.954,0.002,0.006,True,True,0
+X-Learner - T-Learner,auuc,secondary,341.772,91.0194,168.675,516.049,123.834,542.803,0.002,0.006,True,True,0
+X-Learner - T-Learner,auuc_normalized,secondary,0.106218,0.0290808,0.0516983,0.160827,0.0385783,0.171044,0.002,0.006,True,True,0
+X-Learner - T-Learner,top10_incremental_conversions,secondary,228.261,106.547,4.73986,430.44,-45.0758,475.838,0.044,0.132,True,False,0
+X-Learner - T-Learner,top10_rate_diff,secondary,0.000816408,0.000381081,1.69528e-05,0.00153953,-0.00016122,0.0017019,0.044,0.132,True,False,0
+X-Learner - T-Learner,top20_incremental_conversions,secondary,352.977,102.918,150.822,557.675,114.557,591.813,0.002,0.006,True,True,0
+X-Learner - T-Learner,top20_rate_diff,secondary,0.000631236,0.000184051,0.000269718,0.000997303,0.000204864,0.00105835,0.002,0.006,True,True,0
+X-Learner - T-Learner,top30_incremental_conversions,secondary,446.322,101.737,246.288,637.364,203.289,687.197,0,0,True,True,0
+X-Learner - T-Learner,top30_rate_diff,secondary,0.000532111,0.000121293,0.000293628,0.000759875,0.000242364,0.000819286,0,0,True,True,0

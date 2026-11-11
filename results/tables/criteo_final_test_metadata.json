@@ -1,0 +1,143 @@
+{
+  "created_at_utc": "2026-11-11T13:50:40+00:00",
+  "step": "STEP 5-6 final test evaluation",
+  "eval_split": "test",
+  "n": 2795918,
+  "n_treated": 2376530,
+  "n_control": 419388,
+  "conv_treated": 7342,
+  "conv_control": 813,
+  "models": {
+    "T-Learner": "data/criteo/models/300k/T.joblib",
+    "X-Learner": "data/criteo/models/300k/X.joblib",
+    "Causal Forest": "data/criteo/models/300k/CF.joblib"
+  },
+  "training": "train_300000, configs/criteo_models.yaml, seed 42 (fitted in STEP 5-4; not refitted)",
+  "sha256": {
+    "data/criteo/models/300k/T.joblib": "47c114a5a062024f1dca5aca4b863452197280ba0e120be850f6bc83d66e8305",
+    "data/criteo/models/300k/X.joblib": "34c27a4a6e0bf52e975f9818b580f00a54ca15d41a36a453756625117962be4b",
+    "data/criteo/models/300k/CF.joblib": "73bf1f9d9a2cbd97c8f43e4d7880a536be3b455523ee2da1689c90b16e93f150",
+    "configs/criteo_models.yaml": "2b221b7e449dbc1fac101984552c10e9a64449a1cc6d75bb8b4f852c7b926479",
+    "data/criteo/splits/train_300000.npy": "0c80d8c8c343aa016542ad7e26e95fc4e8f6ff7c27c6b990eed7d2631308c584",
+    "data/criteo/splits/test.npy": "46af8d990616e757a70ffabf5ea5ae26149b3d6b0d71ececcd116bb2ef4902e9",
+    "data/criteo/splits/valid.npy": "e703db7dbd21e7c0067256ad2656079a183562516fc6d585bc2b7593e15baba0",
+    "data/criteo/splits/train_pool.npy": "56570fa165cece6409342fd2861f2e6ac55e7354e95105618993c1ed71816380"
+  },
+  "sha256_verified": {
+    "data/criteo/models/300k/T.joblib": true,
+    "data/criteo/models/300k/X.joblib": true,
+    "data/criteo/models/300k/CF.joblib": true,
+    "configs/criteo_models.yaml": true,
+    "data/criteo/splits/train_300000.npy": true,
+    "data/criteo/splits/test.npy": true,
+    "data/criteo/splits/valid.npy": true,
+    "data/criteo/splits/train_pool.npy": true
+  },
+  "index_overlap": {
+    "test&valid": 0,
+    "test&train_pool": 0,
+    "test&train_300000": 0
+  },
+  "row_order_checks": "row_id == split index; subset re-prediction == full prediction; saved npz round-trip",
+  "evaluation": {
+    "code": "src/criteo_evaluation.py (unchanged since STEP 5-2)",
+    "estimator": "ratio",
+    "grid": "phi in {0, 0.01, ..., 1}, trapezoid rule",
+    "ties": "tie-block linear interpolation",
+    "units": "AUUC, Qini area/coefficient and incremental conversions in conversions; normalized AUUC = (AUUC - U(N)/2)/U(N), normalized Qini = (Qini area - Q(N)/2)/Q(N)"
+  },
+  "bootstrap": {
+    "B": 1000,
+    "seed": 42,
+    "scheme": "treated/control resampled separately with replacement (sizes fixed); identical draws for all models and the random reference",
+    "ci": "percentile 95%; paired differences also Bonferroni over 3 pairs (98.33%)",
+    "scope": "test-sample variation of fixed fitted models; training-seed variation not included"
+  },
+  "decision_rule": "pre-specified (STEP 5-5): a model beats random targeting if the 95% percentile CI of its Qini coefficient (area above the random line, random = 0) lies above 0; model differences use the Bonferroni-adjusted (3 pairs) 98.33% CI of the paired Qini difference",
+  "nan_draws": {},
+  "max_undefined_grid_points": {
+    "T:n_undefined_points": 0,
+    "X:n_undefined_points": 0,
+    "CF:n_undefined_points": 0,
+    "Random:n_undefined_points": 0
+  },
+  "predictions": {
+    "T-Learner": {
+      "load_model_sec": 0.05151820900027815,
+      "predict_sec": 22.909038750000036,
+      "n": 2795918,
+      "n_nan": 0,
+      "n_inf": 0,
+      "mean": 0.0010909037788348315,
+      "sd": 0.01348171532333101,
+      "min": -0.513126190874567,
+      "max": 0.45140957735075365,
+      "share_negative": 0.05262278793584075,
+      "share_zero": 0.8356504017642864,
+      "n_unique": 230895,
+      "mode_value": 0.0,
+      "mode_share": 0.8356504017642864,
+      "largest_tie_block": 2336410,
+      "n_tie_blocks": 25838,
+      "share_rows_in_tie_blocks": 0.9266584356193565,
+      "peak_rss_mb_so_far": 1068.296875
+    },
+    "X-Learner": {
+      "load_model_sec": 0.36697808300050383,
+      "predict_sec": 56.07995241699973,
+      "n": 2795918,
+      "n_nan": 0,
+      "n_inf": 0,
+      "mean": 0.0010217746239463087,
+      "sd": 0.010313460762369569,
+      "min": -0.31894265680920003,
+      "max": 0.2273414061557585,
+      "share_negative": 0.055226941562663855,
+      "share_zero": 0.5545262772370291,
+      "n_unique": 868991,
+      "mode_value": 0.0,
+      "mode_share": 0.5545262772370291,
+      "largest_tie_block": 1550410,
+      "n_tie_blocks": 60375,
+      "share_rows_in_tie_blocks": 0.7107869401033936,
+      "peak_rss_mb_so_far": 1147.578125
+    },
+    "Causal Forest": {
+      "load_model_sec": 5.4228020000009565,
+      "predict_sec": 314.358610583,
+      "n": 2795918,
+      "n_nan": 0,
+      "n_inf": 0,
+      "mean": 0.0009513361736363306,
+      "sd": 0.007436594454716546,
+      "min": -0.25785304947153803,
+      "max": 0.13910450654868017,
+      "share_negative": 0.4850067133585463,
+      "share_zero": 0.1336051343422804,
+      "n_unique": 2025676,
+      "mode_value": 0.0,
+      "mode_share": 0.1336051343422804,
+      "largest_tie_block": 373549,
+      "n_tie_blocks": 267329,
+      "share_rows_in_tie_blocks": 0.37110208525428856,
+      "peak_rss_mb_so_far": 3075.59375
+    }
+  },
+  "prediction_files": "data/criteo/predictions/final_test",
+  "timing_sec": {
+    "load_split_sec": 9.352211334000458,
+    "point_eval_sec": 0.7550967080005648,
+    "bootstrap_sec": 210.6182049580002,
+    "total_sec": 628.2064022079994
+  },
+  "peak_rss_mb": 3075.59375,
+  "environment": {
+    "python": "3.13.9",
+    "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "econml": "0.17.0",
+    "joblib": "1.6.0"
+  }
+}

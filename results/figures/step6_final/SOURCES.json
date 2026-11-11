@@ -1,0 +1,14 @@
+{
+  "fig1_sim_sample_size_rmse.png": "results/figures/final_step4/sample_size_rmse.png",
+  "fig1_sim_sample_size_rmse.pdf": "results/figures/final_step4/sample_size_rmse.pdf",
+  "fig2_sim_treatment_ratio_rmse.png": "results/figures/final_step4/treatment_ratio_rmse.png",
+  "fig2_sim_treatment_ratio_rmse.pdf": "results/figures/final_step4/treatment_ratio_rmse.pdf",
+  "fig3_sim_effect_structure_rmse.png": "results/figures/final_step4/effect_complexity_rmse.png",
+  "fig3_sim_effect_structure_rmse.pdf": "results/figures/final_step4/effect_complexity_rmse.pdf",
+  "fig4_criteo_test_qini_curve.png": "results/figures/criteo_final_test/qini_curve.png",
+  "fig4_criteo_test_qini_curve.pdf": "results/figures/criteo_final_test/qini_curve.pdf",
+  "fig5_criteo_test_qini_coefficient_ci.png": "results/figures/criteo_final_test/qini_coefficient_ci.png",
+  "fig5_criteo_test_qini_coefficient_ci.pdf": "results/figures/criteo_final_test/qini_coefficient_ci.pdf",
+  "fig6_criteo_test_targeting.png": "results/figures/criteo_final_test/targeting_incremental_conversions.png",
+  "fig6_criteo_test_targeting.pdf": "results/figures/criteo_final_test/targeting_incremental_conversions.pdf"
+}
